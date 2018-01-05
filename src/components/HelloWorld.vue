@@ -25,7 +25,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'VUE'
+      msg: 'liuyuhang-vue'
     }
   }
 }
