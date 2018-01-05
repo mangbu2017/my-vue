@@ -9,6 +9,9 @@ Vue.config.productionTip = false
 var name = 'liuyuhang'
 console.log(name)
 
+var liuyuhang = 'name'
+console.log(liuyuhang)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
