@@ -6,7 +6,8 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-// var name = "liuyuhang"
+var name = 'liuyuhang'
+console.log(name)
 
 /* eslint-disable no-new */
 new Vue({
