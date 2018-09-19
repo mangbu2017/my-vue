@@ -4,12 +4,14 @@ import qs from 'qs';
 import request from '@/common/utils/request';
 
 import CreateModal from '../components/create-image.vue';
+import CreateSpace from '../../spray-namespace/components/create-space.vue';
 import UpdateLogin from '../components/update-login.vue';
 import InitPassword from '../components/init-password.vue';
 
 @Component({
     components: {
         CreateModal,
+        CreateSpace,
         UpdateLogin,
         InitPassword,
     },
@@ -24,12 +26,14 @@ export default class Index extends Vue {
     list = [];
 
     namespaceList = [];
+    spaceList = null;
 
     namespace = '';
 
     loading = false;
 
     isCreating = false;
+    isSpaceCreating = false;
     isUpdating = false;
     isInitSetting = false;
 
@@ -48,18 +52,31 @@ export default class Index extends Vue {
         this.isCreating = true;
     }
 
-    handleCreateSuccess() {
-        this.isCreating = false;
-        this.keyword = '';
-        this.namespace = '';
-        this.keySpace = '';
-        this.page.current = 1;
-        this.fetchInstanceListByPage();
-        this.$router.push('/spray-warehouse/1');
+    handleCreateSuccess(payload) {
+        if (payload) {
+            this.isSpaceCreating = payload;
+        } else {
+            this.isCreating = false;
+            this.keyword = '';
+            this.namespace = '';
+            this.keySpace = '';
+            this.page.current = 1;
+            this.fetchInstanceListByPage();
+            this.$router.push('/spray-warehouse/1');
+        }
     }
 
     handleCreateClose() {
         this.isCreating = false;
+    }
+
+    handleCreateSpaceSuccess() {
+        this.isSpaceCreating = false;
+        this.getNameSpace();
+    }
+
+    handleCreateSpaceClose() {
+        this.isSpaceCreating = false;
     }
 
     handleLoginPWOpen() {
@@ -185,6 +202,7 @@ export default class Index extends Vue {
             if (data.resultBean.list) {
                 const nameSpaceLists = data.resultBean.list.map(item => ({ value: item.nameSpaceID, label: item.nameSpace }));
                 this.namespaceList = Object.assign({}, this.namespaceList, nameSpaceLists);
+                this.spaceList = nameSpaceLists;
             }
         }).catch((error) => {
             this.$Message.error({

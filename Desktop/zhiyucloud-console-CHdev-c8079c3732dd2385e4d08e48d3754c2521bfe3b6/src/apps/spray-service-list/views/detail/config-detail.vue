@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="config-btn-wrap">
-            <i-button :to="`/spray-service-list/detail/${this.$route.params.id}/configMap`">返回configMap列表</i-button>
+            <i-button :to="`/spray-service-list/detail/${this.$route.params.id}/configMap`">返回配置字典列表</i-button>
         </div>
 
         <codemirror v-model="code" :options="cmOptions" />

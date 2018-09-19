@@ -25,7 +25,6 @@
                 <i-form-item prop="department">
                     <i-input
                         v-model="form.department"
-                        autofocus
                         name="department"
                         placeholder="请输入部门名称"
                         size="large"
@@ -35,7 +34,6 @@
                 <i-form-item prop="mobile">
                     <i-input
                         v-model="form.mobile"
-                        autofocus
                         name="mobile"
                         placeholder="请输入手机号码"
                         size="large"
@@ -46,7 +44,6 @@
                     <i-form-item prop="code">
                         <i-input
                             v-model="form.code"
-                            autofocus
                             class="sms-input"
                             name="code"
                             placeholder="请输入短信验证码"

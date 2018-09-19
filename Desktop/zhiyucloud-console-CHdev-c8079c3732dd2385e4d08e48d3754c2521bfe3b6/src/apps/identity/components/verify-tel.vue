@@ -21,7 +21,6 @@
             <i-form-item prop="code">
                 <i-input
                     v-model="form.code"
-                    autofocus
                     class="sms-input"
                     name="code"
                     placeholder="请输入短信验证码"

@@ -24,9 +24,11 @@
                 search
                 type="text"
                 icon
+                clearable
                 enter-button
                 placeholder="请输入实例名称进行搜索"
                 style="width: 300px"
+                class="search-input"
                 @on-search="handleSearch"
             />
         </div>

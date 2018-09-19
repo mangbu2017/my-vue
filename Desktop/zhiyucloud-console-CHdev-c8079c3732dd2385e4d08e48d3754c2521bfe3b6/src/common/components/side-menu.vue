@@ -15,10 +15,15 @@
                 <i class="menu-ico ico-preview" />
                 概览
             </i-menu-item>
-            <i-menu-item name="2">
-                <i class="menu-ico ico-ecs" />
-                ECS
-            </i-menu-item>
+            <i-submenu name="2">
+                <template slot="title">
+                    <i class="menu-ico ico-ecs" />
+                    ECS
+                </template>
+                <i-menu-item name="2-1">实例</i-menu-item>
+                <!--<i-menu-item name="2-2">云硬盘</i-menu-item>-->
+                <i-menu-item name="2-3">自定义镜像</i-menu-item>
+            </i-submenu>
             <i-submenu name="3">
                 <template slot="title">
                     <i class="menu-ico ico-docker" />
@@ -50,13 +55,19 @@
             </i-submenu>
             <i-submenu name="5">
                 <template slot="title">
+                    <i class="menu-ico ico-msglist" />
+                    消息队列
+                </template>
+                <i-menu-item name="5-1">RabbitMQ</i-menu-item>
+            </i-submenu>
+            <i-submenu name="6">
+                <template slot="title">
                     <i class="menu-ico ico-storage" />
                     存储
                 </template>
-                <!--<i-menu-item name="5-1" to="/">云硬盘</i-menu-item>-->
-                <i-menu-item name="5-2">对象存储</i-menu-item>
+                <i-menu-item name="6-1">对象存储</i-menu-item>
             </i-submenu>
-            <i-menu-item name="6">
+            <i-menu-item name="7">
                 <i class="menu-ico ico-log" />
                 日志服务
             </i-menu-item>
@@ -73,11 +84,14 @@
             </div>
 
             <div class="menu-wrap">
-                <i-tooltip content="ECS" placement="right">
-                    <i-menu-item name="2" to="/ecs-seabed">
-                        <i class="menu-ico ico-ecs" />
-                    </i-menu-item>
-                </i-tooltip>
+                <i-dropdown placement="right">
+                    <i class="menu-ico ico-ecs" />
+                    <i-dropdown-menu slot="list">
+                        <i-dropdown-item><router-link to="/ecs-seabed">实例</router-link></i-dropdown-item>
+                        <!--<i-dropdown-item><router-link to="/ecs-reef">云硬盘</router-link></i-dropdown-item>-->
+                        <i-dropdown-item><router-link to="/ecs-image">自定义镜像</router-link></i-dropdown-item>
+                    </i-dropdown-menu>
+                </i-dropdown>
             </div>
 
             <div class="menu-wrap">
@@ -114,9 +128,18 @@
                 <i-dropdown placement="right">
                     <i class="menu-ico ico-database" />
                     <i-dropdown-menu slot="list">
-                        <i-dropdown-item><router-link to="/ecs-alga/">MySql</router-link></i-dropdown-item>
-                        <i-dropdown-item><router-link to="/ecs-seahare/">Redis</router-link></i-dropdown-item>
-                        <i-dropdown-item><router-link to="/ecs-trepang/">MongoDB</router-link></i-dropdown-item>
+                        <i-dropdown-item><router-link to="/ecs-alga">MySql</router-link></i-dropdown-item>
+                        <i-dropdown-item><router-link to="/ecs-seahare">Redis</router-link></i-dropdown-item>
+                        <i-dropdown-item><router-link to="/ecs-trepang">MongoDB</router-link></i-dropdown-item>
+                    </i-dropdown-menu>
+                </i-dropdown>
+            </div>
+
+            <div class="menu-wrap">
+                <i-dropdown placement="right">
+                    <i class="menu-ico ico-msglist" />
+                    <i-dropdown-menu slot="list">
+                        <i-dropdown-item><router-link to="/ecs-rabbit">RabbitMQ</router-link></i-dropdown-item>
                     </i-dropdown-menu>
                 </i-dropdown>
             </div>
@@ -125,7 +148,6 @@
                 <i-dropdown placement="right">
                     <i class="menu-ico ico-storage" />
                     <i-dropdown-menu slot="list">
-                        <!--<i-dropdown-item><router-link to="/">云硬盘</router-link></i-dropdown-item>-->
                         <i-dropdown-item><router-link to="/dawn">对象存储</router-link></i-dropdown-item>
                     </i-dropdown-menu>
                 </i-dropdown>

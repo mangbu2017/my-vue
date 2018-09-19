@@ -3,12 +3,12 @@ import Component from 'vue-class-component';
 import qs from 'qs';
 import request from '@/common/utils/request';
 
-import CreateModal from '../components/create-modal.vue';
+import CreateSpace from '../components/create-space.vue';
 import InitPassword from '../components/init-password.vue';
 
 @Component({
     components: {
-        CreateModal,
+        CreateSpace,
         InitPassword,
     },
 })

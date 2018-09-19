@@ -39,14 +39,14 @@
                             class="btn-operation"
                             @click="handleDelete(item)"
                         >
-                            delete
+                            删除
                         </i-button>
                         <i-button
                             type="text"
                             class="btn-operation"
                             @click="editConfig(item)"
                         >
-                            edit
+                            编辑
                         </i-button>
                     </td>
                 </tr>

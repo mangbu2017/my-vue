@@ -17,9 +17,11 @@
                 search
                 type="text"
                 icon
+                clearable
                 enter-button
                 placeholder="请输入仓库名称进行搜索"
                 style="width: 300px"
+                class="search-input"
                 @on-search="handleSearch"
             />
         </div>
@@ -90,8 +92,14 @@
         </div>
         <create-modal
             v-if="isCreating"
+            :list="spaceList"
             @on-success="handleCreateSuccess"
             @on-close="handleCreateClose"
+        />
+        <create-space
+            v-if="isSpaceCreating"
+            @on-success="handleCreateSpaceSuccess"
+            @on-close="handleCreateSpaceClose"
         />
         <update-login
             v-if="isUpdating"

@@ -6,16 +6,26 @@ import RegRules from '../../../common/utils/validate-rules';
 
 @Component({
     props: {
+        list: {
+            type: Array,
+            default: [],
+        },
         'on-success': Function,
         'on-close': Function,
+    },
+    watch: {
+        list() {
+            this.namespaceList = Object.assign({}, this.namespaceList, this.list);
+            this.namespaceLength = this.list.length;
+        },
     },
 })
 
 export default class CreateModal extends Vue {
     status = '';
 
-    namespaceList = [];
-    namespaceLength = 1;
+    namespaceList = Object.assign({}, this.namespaceList, this.list);
+    namespaceLength = this.list.length;
 
     form = {
         nameSpaceID: '',
@@ -129,23 +139,7 @@ export default class CreateModal extends Vue {
         });
     }
 
-    getNameSpace() {
-        request({
-            url: '/sprayBack/namespace/searchNameSpaceList',
-        }).then((data) => {
-            if (data.resultBean.list) {
-                this.namespaceLength = data.resultBean.list.length;
-                const nameSpaceLists = data.resultBean.list.map(item => ({ value: item.nameSpaceID, label: item.nameSpace }));
-                this.namespaceList = Object.assign({}, this.namespaceList, nameSpaceLists);
-            }
-        }).catch((error) => {
-            this.$Message.error({
-                content: error.message,
-            });
-        });
-    }
-
-    created() {
-        this.getNameSpace();
+    handleCreateNamespace() {
+        this.$emit('on-success', true);
     }
 }

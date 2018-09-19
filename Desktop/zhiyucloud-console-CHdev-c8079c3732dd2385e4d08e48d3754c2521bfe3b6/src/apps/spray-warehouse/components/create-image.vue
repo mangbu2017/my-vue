@@ -20,14 +20,15 @@
                 :label-width="80"
                 @submit.native.prevent="handleSubmit"
             >
-                <i-form-item label="命名空间" prop="nameSpaceID">
+                <i-form-item v-if="namespaceLength" label="命名空间" prop="nameSpaceID">
                     <i-select v-model="form.nameSpaceID" name="nameSpaceID" style="width:300px">
                         <i-option v-for="item in namespaceList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
                     </i-select>
                 </i-form-item>
-                <p v-if="!namespaceLength" class="form-tip-long">没有可选择的命名空间，
-                    <router-link :to="`/spray-namespace/`">现在去创建一个</router-link>。
-                </p>
+                <i-form-item v-else label="命名空间" prop="nameSpaceID">
+                    <i-button type="primary" @click="handleCreateNamespace">创建命名空间</i-button>
+                    <span class="form-tip form-tip-name" style="left: 130px">您还没有创建命名空间<br>单击创建首个命名空间</span>
+                </i-form-item>
                 <i-form-item label="仓库名称" prop="wareHouseName">
                     <i-input v-model="form.wareHouseName" name="wareHouseName" placeholder="请输入仓库名称" style="width: 300px" />
                 </i-form-item>

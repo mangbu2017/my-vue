@@ -48,7 +48,7 @@
                 </tr>
             </tbody>
         </table>
-        <create-modal
+        <create-space
             v-if="isCreating"
             @on-success="handleCreateSuccess"
             @on-close="handleCreateClose"

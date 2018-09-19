@@ -20,7 +20,6 @@
         <i-form-item prop="retypePassword">
             <i-input
                 v-model="form.retypePassword"
-                autofocus
                 name="retypePassword"
                 placeholder="请输入确认密码"
                 size="large"

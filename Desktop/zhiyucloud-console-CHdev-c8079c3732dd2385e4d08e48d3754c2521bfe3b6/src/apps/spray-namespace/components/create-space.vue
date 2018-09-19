@@ -50,6 +50,6 @@
     </i-modal>
 </template>
 
-<script src="./create-modal.js"></script>
+<script src="./create-space.js"></script>
 <style scoped src="./create-modal.less"></style>
 

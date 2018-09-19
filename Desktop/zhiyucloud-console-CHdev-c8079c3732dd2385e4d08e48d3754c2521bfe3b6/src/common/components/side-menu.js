@@ -24,9 +24,21 @@ export default class SideMenu extends Vue {
     menuRelation = [
         {
             project: 'ecs-seabed',
-            name: '2',
-            relation: [],
+            name: '2-1',
+            relation: ['2'],
             url: '/ecs-seabed',
+        },
+        {
+            project: 'ecs-reef',
+            name: '2-2',
+            relation: ['2'],
+            url: '/ecs-reef',
+        },
+        {
+            project: 'ecs-image',
+            name: '2-3',
+            relation: ['2'],
+            url: '/ecs-image',
         },
         {
             project: 'spray-warehouse',
@@ -101,14 +113,20 @@ export default class SideMenu extends Vue {
             url: '/ecs-trepang',
         },
         {
-            project: 'dawn',
-            name: '5-2',
+            project: 'ecs-rabbit',
+            name: '5-1',
             relation: ['5'],
+            url: '/ecs-rabbit',
+        },
+        {
+            project: 'dawn',
+            name: '6-1',
+            relation: ['6'],
             url: '/dawn',
         },
         {
             project: 'coral',
-            name: '6',
+            name: '7',
             relation: [],
             url: '/coral',
         },
