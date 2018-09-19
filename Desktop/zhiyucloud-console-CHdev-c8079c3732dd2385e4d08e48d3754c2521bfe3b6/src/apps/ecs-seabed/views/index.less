@@ -1,0 +1,57 @@
+table tr td .icon {
+    opacity: 0;
+}
+
+table tr:hover td .icon {
+    opacity: 1;
+}
+
+.page-title {
+    border-left: 3px solid #00b7ee;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.content-wrap {
+    padding: 30px 50px 80px;
+}
+
+.page-toolbar {
+    margin-bottom: 30px;
+}
+.page-toolbar::after {
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+}
+.btn-wrap {
+    float: left;
+    margin-right: 20px;
+}
+.ivu-input-group {
+    float: left;
+}
+
+.checkbox {
+    margin-right: 0;
+}
+
+.icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.loading-spin-icon-load{
+        animation: ani-loading-spin 1s linear infinite;
+}
+@keyframes ani-loading-spin {
+    from { transform: rotate(0deg);}
+    50%  { transform: rotate(180deg);}
+    to   { transform: rotate(360deg);}
+}
+.page{
+    text-align: center;
+    margin-top: 50px;
+}

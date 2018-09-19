@@ -1,0 +1,18 @@
+@tai-form-prefix-cls: ~"@{tai-css-prefix}form";
+@tai-form-item-prefix-cls: ~"@{tai-form-prefix-cls}-item";
+
+.@{form-item-prefix-cls} {
+    .@{tai-form-item-prefix-cls}-help-tip {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        line-height: 1;
+        padding-top: 6px;
+    }
+    
+    &-error {
+        .@{tai-form-item-prefix-cls}-help-tip {
+            display: none;
+        }
+    }
+}

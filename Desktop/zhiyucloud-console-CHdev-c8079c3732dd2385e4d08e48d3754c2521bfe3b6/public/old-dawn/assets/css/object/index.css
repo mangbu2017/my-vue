@@ -1,0 +1,102 @@
+@charset "UTF-8";
+.main-monitor{
+    min-height: 600px;
+}
+
+.main-wrap > h4 {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    border-left: 3px solid #00b7ee;
+}
+
+.uploading {
+    width: 10%;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    float: right;
+    text-align: center;
+    cursor: pointer;
+    color: #0099CC;
+    display: block;
+}
+
+/*表格*/
+.content-table {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+.content-table thead {
+    background: #E1E6EC;
+}
+
+.content-table tbody tr {
+    height: 45px;
+    line-height: 45px;
+}
+
+table th, table td {
+    position: relative;
+    text-align: center;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 8px 4px;
+    line-height: 30px;
+}
+
+table tr td span {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+table tr td span:hover {
+    color: #005ED2;
+}
+
+.goDetail.active {
+    color: #333 !important;
+}
+
+/*提示信息*/
+.nohave-search {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+    color: #838383;
+    text-align: center;
+    display: none;
+}
+
+/*创建bucket弹框*/
+@media (min-width: 768px) {
+    .modal-dialog {
+        margin-top: 150px;
+    }
+}
+
+.message {
+    width: 100%;
+    height: 30px;
+    line-height: 20px;
+    color: red;
+}
+
+.modal-body {
+    padding: 10px 0 40px;
+}
+
+#bucketName {
+    width: 280px;
+}
+
+.createMessage {
+    color: #ccc;
+    line-height: 35px;
+}

@@ -1,0 +1,61 @@
+.container {
+    width: 100%;
+    min-width: 1200px;
+    min-height: 100%;
+    margin: auto;
+    padding: 129px calc(50% - 600px + 8px);
+    background:
+        url(../assets/login-bg.png) no-repeat 50% 135px,
+        linear-gradient(90deg, rgba(13, 7, 53, 1) 0%, rgba(31, 17, 100, 1) 100%);
+}
+
+.card {
+    position: relative;
+    width: 446px;
+    height: 513px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 6px 2px rgba(204, 192, 192, 0.5);
+    border-radius: 10px;
+
+    .card-title {
+        font-size: 26px;
+        font-weight: 500;
+        line-height:37px;
+        text-align: center;
+        color: rgba(53, 64, 83, 1);
+    }
+
+    .card-footer {
+        position: absolute;
+        right: 33px;
+        bottom: 33px;
+        left: 33px;
+        display: flex;
+        margin-top: 130px;
+        padding: 0 10px;
+        justify-content: flex-end;
+    }
+}
+
+.form {
+    margin: 40px 0;
+    padding: 0 10px;
+
+    .form-footer {
+        margin-top: 20px;
+    }
+}
+
+.sms-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .sms-input {
+        width: 200px;
+    }
+}
+
+.success-alert {
+    margin-top: 90px;
+}
