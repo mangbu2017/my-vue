@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redis</title>
+    <link rel="stylesheet" href="../../assets/css/lib/sweetalert.css">
+    <link rel="stylesheet" href="../../assets/css/lib/swalAlert.css">
+    <link rel="stylesheet" href="../../assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/lib/daterangepicker.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!-- 主体部分  -->
+<div class="main-monitor">
+    <!--数量指标-->
+    <div class="basic-config">
+        <div class="config-title">数据指标</div>
+        <ul>
+            <li class="config-active" index="1">命中率</li>
+            <li index="2">数据个数</li>
+            <li index="3">请求命中</li>
+        </ul>
+    </div>
+
+    <div class="row topdisc">
+        <span>查询时间</span>
+        <div class="btn-group timeselect" role="group" aria-label="...">
+            <input type="text" id="datarange" class="form-control" style="width: 250px;">
+            <i class=" glyphicon glyphicon-calendar fa fa-calendar logocalender"></i>
+        </div>
+        <div class="btn-group" role="group" aria-label="..." >
+            <button type="button" class="btn btn-primary buttonactive" id="today">今日</button>
+            <button type="button" class="btn btn-default" id="thisweek">最近一周</button>
+            <button type="button" class="btn btn-default" id="thismonth">最近一月</button>
+        </div>
+    </div>
+    <div class="row topdisc">
+        <div class="chartdisplay" id="chartdisplay"></div>
+    </div>
+</div>
+</body>
+<script src="../../assets/js/lib/jquery-1.12.0.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/lib/echarts.min.js"></script>
+<script src="../../assets/js/lib/sweetalert.js"></script>
+<script src="../../assets/js/lib/swalAlert.js"></script>
+<script src="../../assets/js/lib/moment.js"></script>
+<script src="../../assets/js/lib/daterangepicker.js"></script>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* 页面重置 */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: MicrosoftYaHeiLight;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    font-size: 14px;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, pre, dl, dd, form, input, select, textarea, button, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #5bc0de;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: #5bc0de;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+.main-wrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.main-monitor{
+    min-height: 600px;
+}
+
+/*数量指标*/
+.basic-config {
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction:row;
+}
+
+.config-title {
+    width: 100px;
+    height: auto;
+    line-height: 30px;
+    float: left;
+    font-size: 18px;
+}
+
+.basic-config ul li {
+    height: 30px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 30px;
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+    background: #f5f5f5;
+    color: #373d41;
+    border: 1px solid #d3d5d5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.basic-config ul li:hover {
+    background: #ffffff;
+}
+
+.basic-config ul li.config-active {
+    background: #337ab7;
+    color: #ffffff;
+    border: 1px solid #337ab7;
+}
+
+/*查询时间*/
+.basic-date {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction:row;
+}
+
+.logocalender {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    top: auto;
+    cursor: pointer;
+}
+
+.basic-date .btn-group button {
+    margin-right: 20px;
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/*监控图表*/
+.chart-show {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.keyShow {
+    width: 100%;
+    height: 250px;
+}
+
+/*监控图表*/
+.chart-show {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.show {
+    width: 100%;
+    height: 250px;
+}

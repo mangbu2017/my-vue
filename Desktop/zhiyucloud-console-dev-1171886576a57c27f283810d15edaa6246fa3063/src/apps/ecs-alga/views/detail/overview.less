@@ -1,0 +1,44 @@
+/*表格信息*/
+.message-item {
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin: 30px auto;
+}
+
+.basic-title {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-top: solid 1.6px #e4e8f0;
+  background-color: #f5f6fa;
+  border-left: 4px solid #6d7781;
+  border-right: 1px solid #ddd;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-align: left;
+  color: #333;
+  padding-left: 20px;
+}
+
+td {
+  width: 35%;
+}
+
+table tr td:nth-child(2n-1) {
+  width: 15%;
+}
+
+.icon-eye{
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.loading-spin-icon-load{
+    animation: ani-loading-spin 1s linear infinite;
+}
+@keyframes ani-loading-spin {
+    from { transform: rotate(0deg);}
+    50%  { transform: rotate(180deg);}
+    to   { transform: rotate(360deg);}
+}

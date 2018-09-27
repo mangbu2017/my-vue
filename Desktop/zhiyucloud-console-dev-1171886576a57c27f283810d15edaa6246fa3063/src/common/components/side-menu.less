@@ -1,0 +1,87 @@
+.menu-icon{
+    transition: all .3s;
+}
+.rotate-icon{
+    transform: rotate(-90deg);
+}
+.menu-item span{
+    display: inline-block;
+    overflow: hidden;
+    width: 69px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+    transition: width .2s ease .2s;
+}
+
+.collapsed-menu span{
+    width: 0px;
+    transition: width .2s ease;
+}
+.collapsed-menu i{
+    transform: translateX(5px);
+    transition: font-size .2s ease .2s, transform .2s ease .2s;
+    vertical-align: middle;
+    font-size: 22px;
+}
+
+.menu-item .menu-ico,.menu-collapsed .menu-ico{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
+    background-size: 20px 20px;
+}
+
+.menu-collapsed{
+    padding-top: 15px;
+}
+
+.menu-collapsed .menu-ico{
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-collapsed .menu-wrap:hover{
+    background: rgba(0,0,0, 0.2);
+}
+
+.menu-collapsed .menu-wrap{
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 15px;
+}
+
+
+.menu-collapsed .ivu-dropdown,.menu-collapsed .ivu-tooltip{
+    width: 100%;
+}
+
+
+.ico-ecs{
+    background: url("../assets/icon/menu-ecs.png") 0 0 no-repeat;
+}
+
+.ico-preview{
+    background: url("../assets/icon/menu-preview.png") 0 0 no-repeat;
+}
+
+.ico-database{
+    background: url("../assets/icon/menu-database.png") 0 0 no-repeat;
+}
+
+.ico-msglist{
+    background: url("../assets/icon/menu-msglist.png") 0 0 no-repeat;
+}
+
+.ico-storage{
+    background: url("../assets/icon/menu-storage.png") 0 0 no-repeat;
+}
+
+.ico-docker{
+    background: url("../assets/icon/menu-docker.png") 0 0 no-repeat;
+}
+
+.ico-log{
+    background: url("../assets/icon/menu-log.png") 0 0 no-repeat;
+}

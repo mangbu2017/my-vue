@@ -1,0 +1,154 @@
+@charset "UTF-8";
+.wrap-title {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.wrap-title ul {
+    height: 40px;
+}
+
+.wrap-title ul li {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.title-list li {
+    padding: 0 10px;
+}
+
+.wrap-title ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #333;
+}
+
+.title-list li.active {
+    border-bottom: 2px solid #00b7ee;
+}
+
+.title-return {
+    float: right;
+}
+
+.title-return li a {
+    display: inline-block;
+    height: 30px;
+}
+
+.title-return li button {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #CCCCCC;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.title-return li button.preList {
+    background: #00cbe9;
+    color: #fff;
+    border: 1px solid #00cbe9;
+}
+
+/*概览信息*/
+.topdata {
+    width: 100%;
+    height: 150px;
+    line-height: 100px;
+    margin-top: 60px;
+}
+
+.topdata .topdata-box {
+    width: 33.33%;
+    height: 150px;
+    float: left;
+    background-color: white;
+}
+
+.topdata .one {
+    border: 1px solid lightgray;
+}
+
+.topdata .two, .topdata .three {
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.topdata-box .describe {
+    text-align: center;
+    line-height: 30px;
+    margin-top: 45px;
+}
+
+.topdata-box .filesize {
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.storagedisplay, .visitdisplay, .requestdisplay {
+    width: 100%;
+    height: 210px;
+    /* border:1px solid lightgray; */
+    /* background-color: grey; */
+    /* margin-top: 20px; */
+}
+
+.storagedisplay {
+    margin-top: 0px;
+}
+
+.visitdisplay, .requestdisplay {
+    margin-top: -10px;
+}
+
+/*查询时间*/
+.basic-date {
+    width: auto;
+    height: auto;
+    padding: 10px;
+}
+
+.logocalender {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    top: auto;
+    cursor: pointer;
+}
+
+.basic-date .btn-group button {
+    margin-right: 20px;
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/*监控图表*/
+.chart-show {
+    width: 100%;
+    height: auto;
+    margin: 50px auto;
+}
+
+.keyShow {
+    width: 100%;
+    height: 250px;
+}

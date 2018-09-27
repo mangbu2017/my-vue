@@ -1,0 +1,158 @@
+@tai-table-prefix-cls: ~"@{tai-css-prefix}table";
+
+.@{tai-table-prefix-cls} {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    color: @text-color;
+    font-size: @font-size-small;
+    background-color: #fff;
+    border: 1px solid @border-color-base;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    thead {
+        overflow: hidden;
+    }
+
+    caption,
+    tfoot {
+        height: 48px;
+        line-height: 48px;
+        border-bottom: 1px solid @border-color-split;
+    }
+
+    tfoot {
+        border-bottom: none;
+    }
+
+    th, td {
+        overflow: hidden;
+        min-width: 0;
+        height: 48px;
+        padding-left: 18px;
+        padding-right: 18px;
+        box-sizing: border-box;
+        text-align: left;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+        //position: relative;
+        white-space: normal;
+        word-break: break-all;
+        border-bottom: 1px solid @border-color-split;
+    }
+
+    th {
+        height: 40px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: left;
+        background-color: @table-thead-bg;
+    }
+
+    td {
+        background-color: #fff;
+        transition: background-color @transition-time @ease-in-out;
+    }
+
+    th&-cell,
+    td&-cell {
+        &-narrower {
+            width: 60px;
+        }
+        &-narrow {
+            width: 90px;
+        }
+        &-wide {
+            width: 256px;
+        }
+        &-wider {
+            width: 512px;
+        }
+
+        &-left{
+            text-align: left;
+        }
+        &-center{
+            text-align: center;
+        }
+        &-right{
+            text-align: right;
+        }
+
+        &-ellipsis {
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &-border {
+        th, td{
+            border: 1px solid @border-color-split;
+        }
+    }
+
+    &-stripe tbody {
+        tr:nth-child(2n) {
+            td{
+                background-color: @table-td-stripe-bg;
+            }
+        }
+    }
+
+    &-hover tbody {
+        tr:hover {
+            td{
+                background-color: @table-td-hover-bg;
+            }
+        }
+    }
+
+    &-tip {
+        td {
+          text-align: center;
+        }
+    }
+
+    &-hide {
+        opacity: 0;
+    }
+
+    &-hidden {
+        visibility: hidden;
+    }
+
+    &-large {
+        font-size: @font-size-base;
+        th {
+            height: 48px;
+        }
+        td {
+            height: 60px;
+        }
+        caption,
+        tfoot {
+            height: 60px;
+            line-height: 60px;
+        }
+    }
+
+    &-small {
+        th {
+            height: 32px;
+        }
+        td {
+            height: 40px;
+        }
+        caption,
+        tfoot {
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+}

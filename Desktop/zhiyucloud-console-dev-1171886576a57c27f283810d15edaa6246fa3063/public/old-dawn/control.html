@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Lab存储平台</title>
+    <link rel="shortcut icon" href="./assets/img/iconLogin.png" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="./assets/img/iconLogin.png" sizes="32x32">
+    <link rel="icon" href="./assets/img/iconLogin.png" sizes="64x64">
+    <link rel="stylesheet" href="../assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/lib/sweetalert.css">
+    <link rel="stylesheet" href="../assets/css/lib/swalAlert.css">
+    <link rel="stylesheet" href="../assets/css/lib/daterangepicker.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/object/control.css">
+</head>
+<body>
+<div class="main-monitor">
+    <!--导航-->
+    <div class="wrap-title">
+        <div class="row">
+            <div class="col-md-5 col-sm-4">
+                <ul class="title-list">
+                    <li><a href="javascript:void(0);" id="detail">文件列表</a> <i></i></li>
+                    <li class="active"><a href="javascript:void(0);">概览</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 数据显示 -->
+    <div class="topdata">
+        <div class="topdata-box one">
+            <p class="describe">存储量</p>
+            <!-- 调用接口显示 -->
+            <p class="filesize" id="storageValue"></p>
+        </div>
+        <div class="topdata-box two">
+            <p class="describe">访问量</p>
+            <!-- 调用接口显示 -->
+            <p class="filesize" id="visitValue"></p>
+        </div>
+        <div class="topdata-box three">
+            <p class="describe">请求量</p>
+            <!-- 调用接口显示 -->
+            <p class="filesize" id="requestValue"></p>
+        </div>
+    </div>
+    <!--查询时间-->
+    <div class="basic-date pull-right">
+        <div class="btn-group" style="width: 220px;">
+            <button class="btn btn-primary" type="button" id="today">今天</button>
+            <button class="btn btn-default" type="button" id="week">本周</button>
+            <button class="btn btn-default" type="button" id="mouth">本月</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="..." style="width: 250px">
+            <input type="text" id="configData" class="form-control">
+            <i class=" glyphicon glyphicon-calendar fa fa-calendar logocalender"></i>
+        </div>
+    </div>
+    <!--监控图表-->
+    <div class="chart-show">
+        <!--存储量-->
+        <div id="storagedisplay" class="keyShow">
+        </div>
+    </div>
+    <div class="chart-show">
+        <!--访问量-->
+        <div id="visitdisplay" class="keyShow">
+        </div>
+    </div>
+    <div class="chart-show">
+        <!--请求量-->
+        <div id="requestdisplay" class="keyShow">
+        </div>
+    </div>
+</div>
+</body>
+<script src="../assets/js/lib/jquery-1.12.0.min.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/lib/bootstrap.min.js"></script>
+<script src="../assets/js/lib/echarts.min.js"></script>
+<script src="../assets/js/lib/sweetalert.js"></script>
+<script src="../assets/js/lib/swalAlert.js"></script>
+<script src="../assets/js/lib/moment.js"></script>
+<script src="../assets/js/lib/daterangepicker.js"></script>
+<script src="./assets/js/common/config.js"></script>
+<script src="./assets/js/object/control.js"></script>
+</html>

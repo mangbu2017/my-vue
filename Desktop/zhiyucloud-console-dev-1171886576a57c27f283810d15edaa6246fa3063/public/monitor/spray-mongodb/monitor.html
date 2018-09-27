@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MongoDB</title>
+    <link rel="stylesheet" href="../../assets/css/lib/sweetalert.css">
+    <link rel="stylesheet" href="../../assets/css/lib/swalAlert.css">
+    <link rel="stylesheet" href="../../assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/lib/daterangepicker.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!-- 主体部分  -->
+<div class="main-monitor">
+    <!--content-->
+    <div class="main-wrap">
+        <!--数量指标-->
+        <div class="basic-config">
+            <div class="config-title">数据指标</div>
+            <ul>
+                <li class="config-active" index="0">CPU使用率</li>
+                <li index="2">内存使用率</li>
+                <!--<li index="4">IOPS</li>-->
+                <li index="1">磁盘空间</li>
+                <li index="3">network</li>
+            </ul>
+        </div>
+        <!--查询时间-->
+        <div class="basic-date">
+            <div class="config-title">查询时间</div>
+            <div class="btn-group" style="width: 220px;">
+                <button class="btn btn-primary" type="button" id="today">今天</button>
+                <button class="btn btn-default" type="button" id="week">本周</button>
+                <button class="btn btn-default" type="button" id="mouth">本月</button>
+            </div>
+            <div class="btn-group timeselect" role="group" aria-label="..." style="width: 250px">
+                <input type="text" id="configData" class="form-control">
+                <i class=" glyphicon glyphicon-calendar fa fa-calendar logocalender"></i>
+            </div>
+        </div>
+        <!--监控图表-->
+        <div class="chart-show">
+            <!--性能监控-->
+            <div id="show" class="show">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../assets/js/lib/jquery-1.12.0.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/lib/echarts.min.js"></script>
+<script src="../../assets/js/lib/sweetalert.js"></script>
+<script src="../../assets/js/lib/swalAlert.js"></script>
+<script src="../../assets/js/lib/moment.js"></script>
+<script src="../../assets/js/lib/daterangepicker.js"></script>
+<script src="index.js"></script>
+</html>

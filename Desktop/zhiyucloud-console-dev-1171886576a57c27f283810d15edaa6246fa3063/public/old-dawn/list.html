@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Lab存储平台</title>
+    <link rel="shortcut icon" href="./assets/img/iconLogin.png" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="./assets/img/iconLogin.png" sizes="32x32">
+    <link rel="icon" href="./assets/img/iconLogin.png" sizes="64x64">
+    <link rel="stylesheet" href="../assets/css/lib/sweetalert.css">
+    <link rel="stylesheet" href="../assets/css/lib/swalAlert.css">
+    <link rel="stylesheet" href="../assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/lib/page.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/object/index.css">
+</head>
+<body>
+<div class="main-monitor">
+    <!--content-->
+    <div class="main-wrap">
+        <!--内容写在这个里面-->
+        <h4>bucket管理</h4>
+        <!--操作-->
+        <div class="content-operation">
+            <!--创建搜索-->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">
+                    创建bucket
+                </button>
+            </div>
+            <!--添加下载按钮-->
+            <div class="pull-right">
+                <a href="//zhiyucloud.facethink.com/tools" target="_blank">数据迁移&客户端小工具</a>
+            </div>
+        </div>
+        <!--列表信息-->
+        <div class="content-table">
+            <!--table表格-->
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>bucket名称</th>
+                    <th>所属地域</th>
+                    <th>已用空间</th>
+                    <th>创建人</th>
+                    <th>创建时间</th>
+                    <!--<th>操作</th>-->
+                </tr>
+                </thead>
+                <tbody>
+                <!--<tr>
+                    <td><a href="javascript:void(0);" class="goDetail">111</a></td>
+                    <td>北京</td>
+                    <td>526Gb</td>
+                    <td>2018-01-16-16:25</td>
+                    <td>
+                        <span>配置</span>
+                        <span>删除</span>
+                    </td>
+                </tr>-->
+                </tbody>
+            </table>
+            <!--提示信息-->
+            <div class="nohave-search">
+                暂无查询结果，请核对查询条件！
+            </div>
+            <!--分页-->
+            <div id="pager">
+                <!--<ul class="pages">
+                    <li>首页</li>
+                    <li>上一页</li>
+                    <li>1</li>
+                    <li>下一页</li>
+                    <li>末页</li>
+                </ul>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createBucket" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="createBucket">创建bucket</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form-inline text-center">
+                    <p class="message"></p>
+                    <div class="form-group">
+                        <label for="bucketName">bucket名称&nbsp;</label>
+                        <input type="text" class="form-control" id="bucketName" placeholder="bucket名称">
+                    </div>
+                    <div class="form-group">
+                        <p class="createMessage">长度限制为3-63个字符</p>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="createBtn">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../assets/js/lib/jquery-1.12.0.min.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/lib/bootstrap.min.js"></script>
+<script src="./assets/js/common/config.js"></script>
+<script src="../assets/js/lib/sweetalert.js"></script>
+<script src="../assets/js/lib/swalAlert.js"></script>
+<script src="./assets/js/lib/page.js"></script>
+<script src="./assets/js/object/index.js"></script>
+</html>

@@ -1,0 +1,475 @@
+@charset "UTF-8";
+.main-monitor{
+    min-height: 600px;
+}
+
+/*模态窗口*/
+.wrap-title {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom:30px;
+}
+
+.wrap-title ul {
+    height: 40px;
+}
+
+.wrap-title ul li {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.title-list li {
+    padding: 0 10px;
+}
+
+.wrap-title ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #333;
+}
+
+.title-list li.active {
+    border-bottom: 2px solid #00b7ee;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        margin-top: 50px;
+    }
+}
+
+.modal-body {
+    padding-top: 10px;
+}
+
+.message {
+    width: 100%;
+    height: auto;
+    min-height:30px;
+    line-height: 20px;
+    color: red;
+}
+
+#createModal .modal-body {
+    padding: 10px 0 40px;
+}
+
+#fileName {
+    width: 280px;
+}
+
+#listDetailModal .form-group label {
+    width: 70px;
+    float: left;
+}
+
+#listDetailModal .form-group span {
+    display: inline-block;
+    width: 450px;
+    height: auto;
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+
+#fileURL {
+    display: inline-block;
+    width: 450px;
+    height: 100px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    resize: none;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+/*文件导航*/
+.content .uploading{
+    margin-bottom:10px;
+    cursor: pointer;
+}
+.file-tabList {
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.file-tabList li {
+    height: 100%;
+    font-size: 16px;
+    float: left;
+    cursor: pointer;
+}
+
+.file-tabList li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    color: #000;
+    background: transparent;
+}
+
+.file-tabList li a:active, .file-tabList li a:focus, .file-tabList li a:hover {
+    color: #000000;
+    /* border-bottom: 2px solid #00C1DF;  */
+}
+
+/* .file-tabList li a:linked {
+    color: #000000;
+    border-bottom: 2px solid #00C1DF; 
+} */
+.file-tabList .active {
+    color: #000000;
+    border-bottom: 2px solid #00C1DF;
+}
+
+.file-tabList .filelist {
+    margin-left: 20px;
+}
+
+/*操作按钮*/
+.file-action-grid {
+    width: 100%;
+    height: 50px;
+    clear: both;
+}
+
+.file-action-grid button:hover, .file-action-grid button.focus {
+    background: #cccccc;
+    border: 1px solid #CCCCCC;
+}
+
+.file-action-grid > div {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    margin-right: 20px;
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    color: #000;
+    cursor: pointer;
+}
+
+.file-action-grid > div:focus {
+    border: 2px solid #ffffff;
+}
+
+.file-action-grid > div.js-btn-add {
+    background: #0099CC;
+    border: 2px solid #0099CC;
+    color: #ffffff;
+}
+
+.file-action-grid > div.js-btn-multi-delete {
+    background: #dddddd;
+    border: 2px solid #dddddd;
+    color: #bbb;
+    cursor: not-allowed;
+}
+
+.file-action-grid > div.js-btn-back {
+    background: #dddddd;
+    border: 2px solid #dddddd;
+    color: #bbb;
+}
+
+.file-action-grid > input.showaddress {
+    width: 30%;
+    display: inline-block !important;
+}
+
+/*返回上一级*/
+.break-bucketName {
+    display: inline-block;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.break-bucketName .pre-blue-icon {
+    display: inline-block;
+    border-left: 2px solid #337ab7;
+    border-bottom: 2px solid #337ab7;
+    width: 9px;
+    height: 9px;
+    transform: rotate(45deg);
+}
+
+/*文件列表*/
+/*表格*/
+.content-table {
+    width: 100%;
+    height: auto;
+}
+
+.content-table thead {
+    background: #E1E6EC;
+}
+
+.content-table tbody tr {
+    height: 45px;
+    line-height: 45px;
+}
+
+table th, table td {
+    position: relative;
+    text-align: center;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 8px 4px;
+    line-height: 30px;
+}
+
+table tr td span {
+    margin: 0 10px;
+    color: #bbb;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.file-update, .file-down, .file-detail, .file-delete {
+    color: #005ED2;
+    cursor: pointer;
+}
+
+.selectCheckbox {
+    text-align: left;
+    padding-left: 30px !important;
+}
+
+.selectCheckbox input {
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.selectCheckbox img {
+    width: 30px;
+    height: auto;
+}
+
+/*文件上传*/
+.file-uploader {
+    width: 100%;
+    height: 60px;
+}
+
+.uploadAdd {
+    height: 70px;
+    line-height: 53px;
+}
+
+.uploadAdd span {
+    padding: 0 10px;
+    color: #0099CC;
+}
+
+.file-uploader-list {
+    width: 100%;
+    height: 260px;
+    max-height: 260px;
+    padding: 0 20px;
+    overflow: auto;
+}
+
+.file-upload-dialog {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    border: 1px solid #dddddd;
+    overflow: auto;
+}
+
+.file-upload-dialog thead {
+    border-bottom: 1px solid #dddddd;
+}
+
+.modal .table-bordered > thead > tr > th, .modal .table-bordered > tbody > tr > th, .modal .table-bordered > tfoot > tr > th, .modal .table-bordered > thead > tr > td, .modal .table-bordered > tbody > tr > td, .modal .table-bordered > tfoot > tr > td {
+    border: none;
+}
+
+.forbid {
+    width: 100%;
+    height: 30px;
+    padding: 0 35px 10px;
+    font-weight: bold;
+    color: red;
+    font-size: 14px;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+#uploadBtn {
+    background: #00b7ee;
+    color: #ffffff;
+}
+
+.upload-delete {
+    color: #00b7ee;
+    cursor: pointer;
+}
+
+/*提示信息*/
+.nohave-search {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+    color: #838383;
+    text-align: center;
+    display: none;
+}
+
+.nohave-search, .upload-alert-search {
+    width: 100%;
+}
+
+.nohave-search p, .upload-alert-search p {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #ccc;
+    text-align: center;
+}
+
+/*上传进度*/
+.updateProgress {
+    position: fixed;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    width: 450px;
+    height: 100%;
+    padding: 14px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ffffff;
+    -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    display: none;
+}
+
+.slider-hd {
+    width: 100%;
+    height: 40px;
+}
+
+.slider-hd h4 {
+    font-size: 14px;
+}
+
+.slider-hd h4 b {
+    font-weight: normal;
+}
+
+.tc-15-btn-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.tc-15-btn-close span {
+    position: relative;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    color: #222;
+    background: #222;
+    font-size: 0;
+    vertical-align: middle;
+    -webkit-transform: rotate(45deg);
+    cursor: pointer;
+    outline: 0;
+    display: block;
+}
+
+.tc-15-btn-close span:hover {
+    color: #ffffff;
+}
+
+.tc-15-btn-close span:after {
+    content: '/';
+    display: block;
+    width: 15px;
+    height: 2px;
+    background: #222;
+    -webkit-transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+/*上传进度*/
+.slider-bd {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.slider-bd .tc-progress {
+    width: 100%;
+    height: auto;
+}
+
+.tc-progress .tc-progress-value {
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+}
+
+.tc-progress-value .percentage {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #00b7ee;
+}
+
+.tc-progress-value .brief-info {
+    color: #8f9297;
+    font-size: 12px;
+}
+
+.task-list {
+    width: 100%;
+    height: auto;
+}
+
+.task-list li {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.error {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
